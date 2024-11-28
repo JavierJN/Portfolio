@@ -1,0 +1,52 @@
+---
+const navItems = [
+  { title: "Inicio", label: "inicio", url: "/#inicio" },
+  { title: "Sobre mi", label: "sobre-mi", url: "/#sobre-mi" },
+  { title: "Perfil", label: "perfil", url: "/#perfil" },
+  { title: "Proyectos", label: "proyectos", url: "/#proyectos" }
+ 
+];
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-200 justify-center items-center"
+  >
+    {navItems.map((link) => (
+      <a
+        class="relative block px-2 py-2 transition hover:text-blue-500 nav-link"
+        aria-label={link.label}
+        href={link.url}
+        data-label={link.label}
+      >
+        {link.title}
+      </a>
+    ))}
+  </nav>
+</header>
+
+
+
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  nav {
+    @apply  bg-white/50;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply bg-white/0;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
+  }
+</style>

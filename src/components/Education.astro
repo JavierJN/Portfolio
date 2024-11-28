@@ -1,0 +1,60 @@
+---
+import EducationItem from "./EducationItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Autodidacta",
+    description:
+      "Actualmente en constante aprendizaje, generando experiencia práctica mediante proyectos personales y completando certificaciones que fortalecen mis habilidades técnicas y profesionales.",
+    
+  }, 
+  {
+    date: "Nobiembre 2024",
+    title: "Certificación Udemy | Master en React",
+    description:
+      "Adquirí habilidades en ReactJS, Hooks, MERN, NodeJS, JWT y MongoDB, desarrollando y desplegando APIs en tres proyectos prácticos.",
+
+  },
+  {
+    date: "Agosto 2024",
+    title: "Certificación Udemy | Master en CSS",
+    description:
+      "Me especialicé en diseño web responsivo usando SASS, Flexbox, Grid y Bootstrap, optimizando la experiencia de usuario en diferentes dispositivos.",
+  },
+  {
+    date: "December 2023",
+    title: "Graduación | Ingeniero en Sistemas Computacionales",
+    description:
+      "Obtuve mi título en Ingeniería en Sistemas Computacionales, con experiencia en redes, telecomunicaciones, bases de datos (SQL Server) y sistemas embebidos con Arduino. También trabajé en proyectos de inteligencia artificial como reconocimiento facial y de voz.",
+  },
+  {
+    date: "Agosto  2023 - Noviembre 2023",
+    title: "Prácticas Profesionales | Tienda de Descuentos Arteli",
+    description:
+      "Desarrollé consultas y reportes en SQL Server para recursos humanos y brindé soporte técnico, asegurando el funcionamiento óptimo de los sistemas.",
+  },
+  {
+    date: "Marzo  2022 - Abril 2023",
+    title: "Servicio Social | Grupo CARSO Sanborns",
+    description:
+      "Trabajé como desarrollador Full-Stack, creando una aplicación interna de recursos humanos con Angular para la gestión de datos de empleados a nivel nacional.",
+  },
+  {
+    date: "Julio 2019",
+    title: "Técnico Programador | CBTIS 103",
+    description:
+      "Me gradué como Técnico Programador, adquiriendo una sólida base en programación y desarrollo de software.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <EducationItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
