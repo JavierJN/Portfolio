@@ -3,6 +3,8 @@ import Github from "./icons/Github.astro"
 import React from "./icons/React.astro"
 import Vite from "./icons/Vite.astro"
 import Css from "./icons/Css.astro"
+import Mongo from "./icons/MongoDB.astro"
+import NodeJS from "./icons/NodeJS.astro"
 //import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
@@ -34,7 +36,19 @@ const TAGS = {
     name:"CSS",
     class: "bg-[#4B5563] text-white",
     icon: Css
-  }
+  },
+  MONGODB: {
+    name:"MONGODB",
+    class: "bg-[#3CB371] text-white",
+    icon: Mongo
+
+  },
+  NODEJS: {
+    name:"Nodejs",
+    class: "bg-[#000000] text-white",
+    icon: NodeJS
+
+  },
 }
 const PROJECTS = [
   
@@ -46,6 +60,13 @@ const PROJECTS = [
     github: "https://github.com/JavierJN/TrelloBoard",
     image: "/projects/kanban-board-svgl.webp",
     tags: [TAGS.REACT, TAGS.VITE, TAGS.CSS],
+  },
+  {
+    title: "Clon de Instagram",
+    description:
+      `Aplicación web desarrollada con MongoDB, React, Vite, Express y Node.js, que permite a los usuarios registrarse, publicar fotos, dar "me gusta", seguir a otros usuarios y explorar perfiles. Implementa autenticación segura, almacenamiento de imágenes"`,
+    image: "/projects/redsocial.webp",
+    tags: [TAGS.REACT, TAGS.VITE, TAGS.MONGODB, TAGS.NODEJS],
   },
 ]
 ---
